@@ -52,6 +52,7 @@ export default class Jazzicon extends React.PureComponent {
 
     return (
       <rect
+        key={i}
         x="0"
         y="0"
         rx="0"
