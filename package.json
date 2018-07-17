@@ -6,7 +6,9 @@
   "scripts": {
     "build": "rimraf lib && mkdir lib && babel src -d lib",
     "prepublish": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,12 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "@storybook/react": "^3.4.8",
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-links": "^3.4.8",
+    "@storybook/addons": "^3.4.8",
+    "babel-runtime": "^6.26.0"
   },
   "peerDependencies": {
     "react": "^15.3.2"
