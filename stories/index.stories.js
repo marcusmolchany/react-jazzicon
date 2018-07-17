@@ -2,9 +2,18 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 import { linkTo } from '@storybook/addon-links';
 
 import Jazzicon from '../src';
 
-storiesOf('Jazzicon', module)
-  .add('with text', () => <Jazzicon diameter={100} seed={Math.random(100).toString()} />);
+const stories = storiesOf('Jazzicon', module);
+
+// Add the `withKnobs` decorator to add knobs support to your stories.
+// You can also configure `withKnobs` as a global decorator.
+stories.addDecorator(withKnobs);
+
+// Knobs for React props
+stories.add('default', () => (
+  <Jazzicon diameter={100} seed={number('seed', Math.round(Math.random() * 10000000))} />
+));
