@@ -1,12 +1,21 @@
 {
   "name": "react-jazzicon",
-  "version": "0.0.0",
-  "description": "React component for flyswatter/jazzicon",
+  "version": "0.1.0",
+  "description": "React component for danfinlay/jazzicon",
   "main": "lib/index.js",
   "scripts": {
     "build": "rimraf lib && mkdir lib && babel src -d lib",
     "prepublish": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcusmolchany/react-jazzicon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marcusmolchany/react-jazzicon/issues"
   },
   "keywords": [
     "jazzicon",
@@ -14,13 +23,18 @@
     "ethereum",
     "metamask"
   ],
-  "author": "",
+  "author": "marcusmolchany",
   "license": "MIT",
   "dependencies": {
     "mersenne-twister": "^1.1.0",
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-knobs": "^3.4.8",
+    "@storybook/addon-links": "^3.4.8",
+    "@storybook/addons": "^3.4.8",
+    "@storybook/react": "^3.4.8",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-jest": "^21.0.2",
@@ -29,6 +43,9 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "rimraf": "^2.6.2"
   },
   "peerDependencies": {
