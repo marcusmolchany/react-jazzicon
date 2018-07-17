@@ -19,6 +19,10 @@ export default class Jazzicon extends React.PureComponent {
     this.generator = new MersenneTwister(seed);
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    this.generator = new MersenneTwister(this.props.seed);
+  }
+
   genColor = (colors) => {
     const idx = Math.floor(colors.length * this.generator.random());
     const color = colors.splice(idx,1)[0];
