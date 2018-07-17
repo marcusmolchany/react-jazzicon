@@ -22,6 +22,22 @@ export default class App extends React.Component {
 }
 ```
 
+for Ethereum addresses
+```js
+import Jazzicon, { jsNumberForAddress } from 'react-jazzicon'
+
+export default class App extends React.Component {
+
+  …
+
+  render() {
+    return (
+      <Jazzicon diameter={100} seed={jsNumberForAddress('0x1111111111111111111111111111111111111111')} />
+    )
+  }
+}
+```
+
 # setup
 
 ```sh

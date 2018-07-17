@@ -11,17 +11,10 @@ const svgns = 'http://www.w3.org/2000/svg';
 const wobble = 30;
 
 export default class Jazzicon extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    const { seed } = this.props;
-
-    this.generator = new MersenneTwister(seed);
-  }
-
   genColor = (colors) => {
+    const rand = this.generator.random();
     const idx = Math.floor(colors.length * this.generator.random());
-    const color = colors.splice(idx,1)[0];
+    const color = colors.splice(idx, 1)[0];
     return color;
   }
 
@@ -34,7 +27,7 @@ export default class Jazzicon extends React.PureComponent {
     });
   }
 
-  genShape = (remainingColors, diameter, i, total, svg) => {
+  genShape = (remainingColors, diameter, i, total) => {
     const center = diameter / 2;
     const firstRot = this.generator.random();
     const angle = Math.PI * 2 * firstRot;
@@ -61,13 +54,15 @@ export default class Jazzicon extends React.PureComponent {
         width={diameter}
         transform={transform}
         fill={fill} // todo: make prop
-      >
-      </rect>
-    )
+      />
+    );
   }
 
   render() {
-    const { diameter, paperStyles, svgStyles } = this.props;
+    const { diameter, paperStyles, seed, svgStyles } = this.props;
+
+    this.generator = new MersenneTwister(seed);
+
     const remainingColors = this.hueShift(colors.slice(), this.generator);
     const shapesArr = Array(shapeCount).fill();
 
