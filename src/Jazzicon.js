@@ -58,16 +58,10 @@ export default class Jazzicon extends React.PureComponent {
     )
   }
 
-  jsNumberForAddress = (address) => {
-    const addr = address.slice(2, 10);
-    const seed = parseInt(addr, 16);
-    return seed
-  }
-
   render() {
     const { diameter, paperStyles, seed, svgStyles } = this.props;
 
-    this.generator = new MersenneTwister(this.jsNumberForAddress(seed));
+    this.generator = new MersenneTwister(seed);
 
     const remainingColors = this.hueShift(colors.slice(), this.generator);
     const shapesArr = Array(shapeCount).fill();
