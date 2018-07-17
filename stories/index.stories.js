@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 import { linkTo } from '@storybook/addon-links';
 
-import Jazzicon from '../src';
+import Jazzicon, { jsNumberForAddress } from '../src';
 
 const stories = storiesOf('Jazzicon', module);
 
@@ -15,5 +15,5 @@ stories.addDecorator(withKnobs);
 
 // Knobs for React props
 stories.add('default', () => (
-  <Jazzicon diameter={100} seed={number('seed', Math.round(Math.random() * 10000000))} />
+  <Jazzicon diameter={100} seed={text('seed', jsNumberForAddress('0x1111111111111111111111111111111111111111'))} />
 ));
