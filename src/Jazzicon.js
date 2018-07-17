@@ -12,8 +12,9 @@ const wobble = 30;
 
 export default class Jazzicon extends React.PureComponent {
   genColor = (colors) => {
+    const rand = this.generator.random();
     const idx = Math.floor(colors.length * this.generator.random());
-    const color = colors.splice(idx,1)[0];
+    const color = colors.splice(idx, 1)[0];
     return color;
   }
 
@@ -26,7 +27,7 @@ export default class Jazzicon extends React.PureComponent {
     });
   }
 
-  genShape = (remainingColors, diameter, i, total, svg) => {
+  genShape = (remainingColors, diameter, i, total) => {
     const center = diameter / 2;
     const firstRot = this.generator.random();
     const angle = Math.PI * 2 * firstRot;
@@ -53,9 +54,8 @@ export default class Jazzicon extends React.PureComponent {
         width={diameter}
         transform={transform}
         fill={fill} // todo: make prop
-      >
-      </rect>
-    )
+      />
+    );
   }
 
   render() {
