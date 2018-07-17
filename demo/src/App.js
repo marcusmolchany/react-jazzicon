@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 
-import Jazzicon from 'react-jazzicon';
+import Jazzicon, { jsNumberForAddress } from 'react-jazzicon';
+
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   state = {
-    seed: Array(40).fill(0),
+    address: '0x1111111111111111111111111111111111111111',
   };
 
-  onChange = ({ target: { value: seed } }) => {
+  onChange = ({ target: { value: address } }) => {
     this.setState(() => ({
-      seed
+      address,
     }));
   }
 
   render() {
+    console.log('this.state.address', this.state.address);
+
     return (
       <div className="App">
         <div className="App-header">
@@ -23,7 +26,7 @@ class App extends Component {
           <h2>react-jazzicon</h2>
         </div>
         <p className="App-intro">
-          <Jazzicon diameter={100} seed={Math.random(100).toString()} />
+          <Jazzicon diameter={100} seed={jsNumberForAddress(this.state.address)} />
         </p>
         <p>
           <input type="text" onChange={this.onChange} placeholder="Type stuff here..." />
