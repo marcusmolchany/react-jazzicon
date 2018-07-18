@@ -16,7 +16,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Jazzicon diameter={100} seed={Math.random(100).toString()} />
+      <Jazzicon diameter={100} seed={Math.round(Math.random() * 10000000)} />
     )
   }
 }
