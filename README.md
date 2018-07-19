@@ -41,7 +41,7 @@ export default class App extends React.Component {
 # setup
 
 ```sh
-$ https://github.com/marcusmolchany/react-jazzicon
+$ git clone https://github.com/marcusmolchany/react-jazzicon
 $ cd react-jazzicon
 $ yarn # or npm i
 ```
