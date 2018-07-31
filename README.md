@@ -1,6 +1,6 @@
 react-jazzicon
 ==============
-[![NPM version][npm-image]][npm-url] [![dependencies Status][david-dep-image]][david-dep-url] [![devDependencies Status][david-devDep-image]][david-devDep-url]
+[![NPM version][npm-image]][npm-url] [![dependencies Status][david-dep-image]][david-dep-url] [![devDependencies Status][david-devDep-image]][david-devDep-url] [![Known Vulnerabilities][snyk-image]][snyk-url]
 
 This is a react component for [Dan Finlay's](https://github.com/danfinlay)
 [jazzicon](https://github.com/danfinlay/jazzicon).
@@ -66,3 +66,5 @@ $ yarn start # or npm run start
 [david-devDep-url]: https://david-dm.org/marcusmolchany/react-jazzicon?type=dev
 [npm-image]: https://badge.fury.io/js/react-jazzicon.svg
 [npm-url]: https://npmjs.org/package/react-jazzicon
+[snyk-image]: https://snyk.io/test/github/marcusmolchany/react-jazzicon/badge.svg?targetFile=package.json
+[snyk-url]: https://snyk.io/test/github/marcusmolchany/react-jazzicon?targetFile=package.json
