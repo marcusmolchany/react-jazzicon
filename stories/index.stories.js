@@ -15,5 +15,5 @@ stories.addDecorator(withKnobs);
 
 // Knobs for React props
 stories.add('default', () => (
-  <Jazzicon diameter={100} seed={text('seed', jsNumberForAddress('0x1111111111111111111111111111111111111111'))} />
+  <Jazzicon diameter={100} seed={number('seed', jsNumberForAddress('0x1111111111111111111111111111111111111111'))} />
 ));

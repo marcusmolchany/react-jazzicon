@@ -79,6 +79,6 @@ export default class Jazzicon extends React.PureComponent {
 Jazzicon.propTypes = {
   diameter: PropTypes.number,
   paperStyles: PropTypes.object,
-  seed: PropTypes.string,
+  seed: PropTypes.number,
   svgStyles: PropTypes.object,
 };
