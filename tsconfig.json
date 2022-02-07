@@ -26,5 +26,5 @@
     "types": ["node"]
   },
   "exclude": ["node_modules", "dist", "src/stories"],
-  "include": ["src", "stories"]
+  "include": ["src"]
 }
