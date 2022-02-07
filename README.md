@@ -50,18 +50,15 @@ $ cd react-jazzicon
 $ yarn # or npm i
 ```
 
-## demo page
+## storybooks
 
-the demo page is on the `gh-pages` branch in the `demo` folder.
+the storybooks github pages are hosted from the `/docs` directory on the `gh-pages` branch.
+
+run the storybooks locally by running the following commands:
 
 ```sh
-# first install dependencies in the top level package
 $ yarn # or npm i
-
-# then checkout the gh-pages branch and install dependencies in the "demo" folder
-$ git checkout gh-pages
-$ cd demo && yarn # or npm i
-$ yarn start # or npm run start
+$ yarn storybooks # or npm run storybooks
 ```
 
 [npm-image]: https://img.shields.io/npm/v/react-jazzicon.svg?style=for-the-badge&labelColor=161c22
