@@ -1,5 +1,3 @@
-import * as React from "react";
-
 const styles = {
   borderRadius: "50px",
   display: "inline-block",
