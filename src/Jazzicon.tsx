@@ -5,6 +5,7 @@ import { colorRotate } from "./colorUtils";
 import colors from "./colors";
 import Paper from "./Paper";
 
+// constants
 const shapeCount = 4;
 const svgns = "http://www.w3.org/2000/svg";
 const wobble = 30;
