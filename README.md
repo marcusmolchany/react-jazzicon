@@ -13,15 +13,13 @@ This is a react component for [Dan Finlay's](https://github.com/danfinlay)
 ```js
 import Jazzicon from 'react-jazzicon'
 
-export default class App extends React.Component {
+export default function App(){
 
   …
 
-  render() {
-    return (
-      <Jazzicon diameter={100} seed={Math.round(Math.random() * 10000000)} />
-    )
-  }
+  return (
+    <Jazzicon diameter={100} seed={Math.round(Math.random() * 10000000)} />
+  )
 }
 ```
 
@@ -30,15 +28,13 @@ for Ethereum addresses
 ```js
 import Jazzicon, { jsNumberForAddress } from 'react-jazzicon'
 
-export default class App extends React.Component {
+export default function App () {
 
   …
 
-  render() {
-    return (
-      <Jazzicon diameter={100} seed={jsNumberForAddress('0x1111111111111111111111111111111111111111')} />
-    )
-  }
+  return (
+    <Jazzicon diameter={100} seed={jsNumberForAddress('0x1111111111111111111111111111111111111111')} />
+  )
 }
 ```
 
