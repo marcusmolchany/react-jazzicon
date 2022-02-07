@@ -24,8 +24,9 @@ export default class Jazzicon extends React.PureComponent<JazziconProps> {
   props: JazziconProps;
 
   genColor = (colors: Colors): string => {
-    const rand = this.generator.random();
-    const idx = Math.floor(colors.length * rand);
+    // @ts-ignore
+    const rand = this.generator.random(); // purposefully call the generator once, before using it again on the next line
+    const idx = Math.floor(colors.length * this.generator.random());
     const color = colors.splice(idx, 1)[0];
     return color;
   };
