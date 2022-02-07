@@ -24,7 +24,7 @@
     "url": "https://github.com/marcusmolchany/react-jazzicon/issues"
   },
   "keywords": [
-    "jazzicon",
+    "jazzicon",g
     "react",
     "ethereum",
     "metamask"
@@ -32,18 +32,12 @@
   "author": "marcusmolchany",
   "license": "MIT",
   "dependencies": {
-    "color": "^0.11.0",
+    "color": "^4.2.0",
     "mersenne-twister": "^1.1.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.8",
-    "@storybook/addon-knobs": "^3.4.8",
-    "@storybook/addon-links": "^3.4.8",
-    "@storybook/addons": "^3.4.8",
-    "@storybook/react": "^3.4.8",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5"
   },
   "peerDependencies": {
     "react": "^17.0.0"
