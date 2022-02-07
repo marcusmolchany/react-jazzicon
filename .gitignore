@@ -1,5 +1,5 @@
-# ignore compiled lib file
-lib
+# ignore compiled dist files
+dist
 
 # Logs
 logs
