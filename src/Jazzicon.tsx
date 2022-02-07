@@ -1,7 +1,7 @@
 import * as React from "react";
-import Color from "color";
 import MersenneTwister from "mersenne-twister";
 
+import { colorRotate } from "./colorUtils";
 import colors from "./colors";
 import Paper from "./Paper";
 
@@ -33,11 +33,8 @@ export default class Jazzicon extends React.PureComponent<JazziconProps> {
 
   hueShift = (colors: Colors, generator: MersenneTwister): Array<string> => {
     const amount = generator.random() * 30 - wobble / 2;
-    return colors.map(function (hex) {
-      const color = Color(hex);
-      color.rotate(amount);
-      return color.hex();
-    });
+    const rotate = (hex: string) => colorRotate(hex, amount);
+    return colors.map(rotate);
   };
 
   genShape = (
