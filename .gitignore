@@ -1,6 +1,12 @@
 # ignore compiled dist files
 dist
 
+# ignore typescript tsbuildinfo
+tsconfig.tsbuildinfo
+
+# ignore mac system file
+.DS_Store
+
 # Logs
 logs
 *.log
